@@ -1,15 +1,16 @@
-// You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
-// 
-// // // Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
-// 
-// // []                                -->  "no one likes this"
-// ["Peter"]                         -->  "Peter likes this"
-// // ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
-// // ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
-// // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
-// // Note: For 4 or more names, the number in "and 2 others" simply increases.
-//conditional names.length return string with ${names[index]} 
-// @4+ ${names[index]} + ${names.length - 2}
+/* You probably know the "like" system from
+posts, pictures or other items. We want to 
+an item.
+ Implement the function which takes an arra
+item. It must return the display text as sh
+ [] -->  "no one likes this"
+["Peter"] -->  "Peter likes this"
+["Jacob", "Alex"] -->  "Jacob and Alex like
+["Max", "John", "Mark"] -->  "Max, John and
+["Alex", "Jacob", "Mark", "Max"]  -->  "Ale
+Note: For 4 or more names, the number in "a
+conditional names.length return string with
+@4+ ${names[index]} + ${names.length - 2}*/
 
 function likes(names){
     let n = names.length;
@@ -20,31 +21,34 @@ function likes(names){
         return `${names[0]} likes this` 
     }
     else if(n === 2){
-        return `${names[0]} and ${names[1]} like this`
+        return `${names[0]} and ${names[1]}
     }
     else if(n === 3){
-        return `${names[0]}, ${names[1]} and ${names[2]} like this`
+        return `${names[0]}, ${names[1]} an
     }
     else {
-        return`${names[0]}, ${names[1]} and ${n - 2} others like this`
+        return`${names[0]}, ${names[1]} and
     }
 }
 
-// refractor to be a case statement 
+/*refractor to be a case statement*/ 
+/*
+function likes(names) {
+    return {
+    0: 'no one likes this',
+    1: `${names[0]} likes this`, 
+    2: `${names[0]} and ${names[1]} like th
+    3: `${names[0]}, ${names[1]} and ${name
+    4: `${names[0]}, ${names[1]} and ${name
+    }
+    [Math.min(4, names.length)]
+}
+*/
 
-// function likes(names) {
-    // return {
-    //   0: 'no one likes this',
-    //   1: `${names[0]} likes this`, 
-    //   2: `${names[0]} and ${names[1]} like this`, 
-    // //   3: `${names[0]}, ${names[1]} and ${names[2]} like this`, 
-    // //   4: `${names[0]}, ${names[1]} and ${names.length - 2} others like this`, 
-    // }[Math.min(4, names.length)]
-//   }
 
+/*Test*/
 
-
-let testNames1 = ["Johnny", "Sammy", "Alice", "Scott", "Samantha"]  
+let testNames1 = ["Johnny", "Sammy", "Alice
 let testNames2 = ["John", "Sam", "Carl",]
 let testNames3 = ['John', 'Sam']
 let testNames4 = ['John']
@@ -54,6 +58,36 @@ console.log(likes(testNames2))
 console.log(likes(testNames3))
 console.log(likes(testNames4))
 console.log(likes(testNames5))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
