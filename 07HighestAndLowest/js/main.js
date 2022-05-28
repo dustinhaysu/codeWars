@@ -8,3 +8,10 @@ Notes
 All numbers are valid Int32, no need to validate them.
 There will always be at least one number in the input string.
 Output string must be two numbers separated by a single space, and highest number is first.*/
+
+function highAndLow(numbers){
+    numbers = numbers.split(' ').map(Number);
+    return `${Math.max.apply(null, numbers)} ${Math.min.apply(null, numbers)}` 
+  }
+  console.log(highAndLow('18 4 67 -33'))
+
