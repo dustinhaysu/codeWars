@@ -14,7 +14,7 @@ for(let i = 0; i<n; i++){
 
 }
 return sum
-console.log(sum)
+console.log(sum) 
 }
 
 solution(-10)

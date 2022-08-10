@@ -13,5 +13,5 @@ function highAndLow(numbers){
     numbers = numbers.split(' ').map(Number);
     return `${Math.max.apply(null, numbers)} ${Math.min.apply(null, numbers)}` 
   }
-  console.log(highAndLow('18 4 67 -33'))
+  console.log(highAndLow('18 4 67 -33')) 
 

@@ -7,4 +7,4 @@ function squareDigits(num){
     2))
   return parseInt(array.join(''))
 }
-console.log(squareDigits(9119))
+console.log(squareDigits(9119)) 

@@ -17,4 +17,4 @@
 let x = 278
 // console.log(x.toString().split('').map(Number).reduce())
 let y = [3,5,7]
-console.log(y.reduce((a,b)=>{a+b,0}))  
+console.log(y.reduce((a,b)=>{a+b,0}))   

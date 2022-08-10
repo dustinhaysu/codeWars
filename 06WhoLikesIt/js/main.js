@@ -21,7 +21,7 @@ function likes(names){
         return `${names[0]} likes this` 
     }
     else if(n === 2){
-        return `${names[0]} and ${names[1]}
+        return `${names[0]} and ${names[1]} 
     }
     else if(n === 3){
         return `${names[0]}, ${names[1]} an
@@ -34,14 +34,14 @@ function likes(names){
 /*refractor to be a case statement*/ 
 /*
 function likes(names) {
-    return {
-    0: 'no one likes this',
-    1: `${names[0]} likes this`, 
-    2: `${names[0]} and ${names[1]} like th
-    3: `${names[0]}, ${names[1]} and ${name
-    4: `${names[0]}, ${names[1]} and ${name
-    }
-    [Math.min(4, names.length)]
+  names = names || [];
+  switch(names.length){
+    case 0: return 'no one likes this'; break;
+    case 1: return names[0] + ' likes this'; break;
+    case 2: return names[0] + ' and ' + names[1] + ' like this'; break;
+    case 3: return names[0] + ', ' + names[1] + ' and ' + names[2] + ' like this'; break;
+    default: return names[0] + ', ' + names[1] + ' and ' + (names.length - 2) + ' others like this';
+  }
 }
 */
 
@@ -58,51 +58,3 @@ console.log(likes(testNames2))
 console.log(likes(testNames3))
 console.log(likes(testNames4))
 console.log(likes(testNames5))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
