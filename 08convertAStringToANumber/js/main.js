@@ -13,5 +13,6 @@
 const stringToNumber = function(str){
     return Number(str)
     }
+    // can also use parseInt(str)
 
     console.log(stringToNumber("12345"))
