@@ -12,7 +12,7 @@
 // FUNDAMENTALS MATHEMATICS
 
 function century(year) {
-   return Math.max(year * .01) * 100
+   return Math.ceil(year * .01) 
   }
 
   console.log(century(1))
