@@ -14,6 +14,6 @@ function summation(num) {
     for(i=1; i<=num; i++) {
         sum += i
     }
-return sum
+return sum 
   }
   console.log(summation(2))
